@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+/Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
+
 /Users/hanisha/Desktop/ft_printf42/main.c
 stdio.h
 -
+includes/ft_printf.h
+/Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
 

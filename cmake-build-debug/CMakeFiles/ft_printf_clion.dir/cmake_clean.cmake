@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ft_printf_clion.dir/ft_printf.c.o"
-  "CMakeFiles/ft_printf_clion.dir/libft/ft_putchar.c.o"
   "CMakeFiles/ft_printf_clion.dir/main.c.o"
   "ft_printf_clion"
   "ft_printf_clion.pdb"

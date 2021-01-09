@@ -84,9 +84,6 @@
 		<Unit filename="/Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h">
 			<Option target="ft_printf_clion"/>
 		</Unit>
-		<Unit filename="/Users/hanisha/Desktop/ft_printf42/libft/ft_putchar.c">
-			<Option target="ft_printf_clion"/>
-		</Unit>
 		<Unit filename="/Users/hanisha/Desktop/ft_printf42/main.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>

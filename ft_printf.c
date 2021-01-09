@@ -15,10 +15,18 @@
 #include <unistd.h>
 #include "libft/libft.h"
 
+int result; // возвращаемое значение
+
+//выводим посимвольно
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	result++;
+}
+
 int ft_printf(const char *s_format, ...)
 {
 	va_list ap; //инициализиуем лист параметров
-	int result; // возвращаемое значение
 	int i; //cчетчик для строки
 
 	i = 0;
@@ -26,9 +34,9 @@ int ft_printf(const char *s_format, ...)
 	va_start(ap,s_format);
 	while (s_format[i] != '\0')
 	{
-		if (s_format[i] == '%' && s_format[i+1] != '\0' )
+		if (s_format[i] == '%' && s_format[i + 1] != '\0' )
 		{
-			//обработка
+
 		}
 		else
 			ft_putchar(s_format[i]);

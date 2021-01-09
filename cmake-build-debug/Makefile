@@ -170,33 +170,6 @@ ft_printf.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
-libft/ft_putchar.o: libft/ft_putchar.c.o
-
-.PHONY : libft/ft_putchar.o
-
-# target to build an object file
-libft/ft_putchar.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar.c.o
-.PHONY : libft/ft_putchar.c.o
-
-libft/ft_putchar.i: libft/ft_putchar.c.i
-
-.PHONY : libft/ft_putchar.i
-
-# target to preprocess a source file
-libft/ft_putchar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar.c.i
-.PHONY : libft/ft_putchar.c.i
-
-libft/ft_putchar.s: libft/ft_putchar.c.s
-
-.PHONY : libft/ft_putchar.s
-
-# target to generate assembly for a file
-libft/ft_putchar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar.c.s
-.PHONY : libft/ft_putchar.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -236,9 +209,6 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
-	@echo "... libft/ft_putchar.o"
-	@echo "... libft/ft_putchar.i"
-	@echo "... libft/ft_putchar.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
