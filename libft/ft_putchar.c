@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hanisha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 13:10:49 by hanisha           #+#    #+#             */
-/*   Updated: 2020/10/29 15:55:15 by hanisha          ###   ########.fr       */
+/*   Created: 2021/01/09 14:14:06 by hanisha           #+#    #+#             */
+/*   Updated: 2021/01/09 14:14:08 by hanisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_putchar(char c)
 {
-	size_t i;
-
-	if (str != NULL)
-	{
-		i = 0;
-		while (str[i])
-			i++;
-		return (i);
-	}
-	else
-		return (0);
+	write(1, &c, 1);
 }

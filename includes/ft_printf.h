@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hanisha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 13:10:49 by hanisha           #+#    #+#             */
-/*   Updated: 2020/10/29 15:55:15 by hanisha          ###   ########.fr       */
+/*   Created: 2021/01/09 13:20:58 by hanisha           #+#    #+#             */
+/*   Updated: 2021/01/09 13:21:06 by hanisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+#define FT_PRINTF_H
 
-size_t	ft_strlen(const char *str)
-{
-	size_t i;
 
-	if (str != NULL)
-	{
-		i = 0;
-		while (str[i])
-			i++;
-		return (i);
-	}
-	else
-		return (0);
-}
+
+#endif FT_PRINTF_H

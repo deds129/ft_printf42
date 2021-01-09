@@ -3,4 +3,4 @@ project(ft_printf_clion C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(ft_printf_clion main.c)
+add_executable(ft_printf_clion main.c ft_printf.c includes/ft_printf.h libft/ft_putchar.c)

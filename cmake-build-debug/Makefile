@@ -143,6 +143,60 @@ ft_printf_clion/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/build
 .PHONY : ft_printf_clion/fast
 
+ft_printf.o: ft_printf.c.o
+
+.PHONY : ft_printf.o
+
+# target to build an object file
+ft_printf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_printf.c.o
+.PHONY : ft_printf.c.o
+
+ft_printf.i: ft_printf.c.i
+
+.PHONY : ft_printf.i
+
+# target to preprocess a source file
+ft_printf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_printf.c.i
+.PHONY : ft_printf.c.i
+
+ft_printf.s: ft_printf.c.s
+
+.PHONY : ft_printf.s
+
+# target to generate assembly for a file
+ft_printf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_printf.c.s
+.PHONY : ft_printf.c.s
+
+libft/ft_putchar.o: libft/ft_putchar.c.o
+
+.PHONY : libft/ft_putchar.o
+
+# target to build an object file
+libft/ft_putchar.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar.c.o
+.PHONY : libft/ft_putchar.c.o
+
+libft/ft_putchar.i: libft/ft_putchar.c.i
+
+.PHONY : libft/ft_putchar.i
+
+# target to preprocess a source file
+libft/ft_putchar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar.c.i
+.PHONY : libft/ft_putchar.c.i
+
+libft/ft_putchar.s: libft/ft_putchar.c.s
+
+.PHONY : libft/ft_putchar.s
+
+# target to generate assembly for a file
+libft/ft_putchar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/libft/ft_putchar.c.s
+.PHONY : libft/ft_putchar.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -179,6 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ft_printf_clion"
+	@echo "... ft_printf.o"
+	@echo "... ft_printf.i"
+	@echo "... ft_printf.s"
+	@echo "... libft/ft_putchar.o"
+	@echo "... libft/ft_putchar.i"
+	@echo "... libft/ft_putchar.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
