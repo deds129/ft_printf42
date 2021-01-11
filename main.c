@@ -2,7 +2,10 @@
 #include "includes/ft_printf.h"
 int main()
 {
+	int ret;
 	//printf("Hello, World!\n");
-	ft_printf("ddd");
-	return 0;
+	printf(" | %d\n" ,ft_printf("ddd"));
+
+	printf("%-5dhello",-7);
+	return (0);
 }

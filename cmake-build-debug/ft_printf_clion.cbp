@@ -87,6 +87,9 @@
 		<Unit filename="/Users/hanisha/Desktop/ft_printf42/main.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
+		<Unit filename="/Users/hanisha/Desktop/ft_printf42/parser/ft_format_parser.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
 		<Unit filename="/Users/hanisha/Desktop/ft_printf42/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

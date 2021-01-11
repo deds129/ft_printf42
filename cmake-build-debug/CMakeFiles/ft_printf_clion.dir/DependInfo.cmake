@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/hanisha/Desktop/ft_printf42/ft_printf.c" "/Users/hanisha/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_printf.c.o"
   "/Users/hanisha/Desktop/ft_printf42/main.c" "/Users/hanisha/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/main.c.o"
+  "/Users/hanisha/Desktop/ft_printf42/parser/ft_format_parser.c" "/Users/hanisha/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

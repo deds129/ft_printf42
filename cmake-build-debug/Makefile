@@ -197,6 +197,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/main.c.s
 .PHONY : main.c.s
 
+parser/ft_format_parser.o: parser/ft_format_parser.c.o
+
+.PHONY : parser/ft_format_parser.o
+
+# target to build an object file
+parser/ft_format_parser.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.o
+.PHONY : parser/ft_format_parser.c.o
+
+parser/ft_format_parser.i: parser/ft_format_parser.c.i
+
+.PHONY : parser/ft_format_parser.i
+
+# target to preprocess a source file
+parser/ft_format_parser.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.i
+.PHONY : parser/ft_format_parser.c.i
+
+parser/ft_format_parser.s: parser/ft_format_parser.c.s
+
+.PHONY : parser/ft_format_parser.s
+
+# target to generate assembly for a file
+parser/ft_format_parser.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.s
+.PHONY : parser/ft_format_parser.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +239,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parser/ft_format_parser.o"
+	@echo "... parser/ft_format_parser.i"
+	@echo "... parser/ft_format_parser.s"
 .PHONY : help
 
 

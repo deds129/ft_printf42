@@ -3,7 +3,13 @@
 
 CMakeFiles/ft_printf_clion.dir/ft_printf.c.o
  /Users/hanisha/Desktop/ft_printf42/ft_printf.c
+ /Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
  /Users/hanisha/Desktop/ft_printf42/libft/libft.h
 CMakeFiles/ft_printf_clion.dir/main.c.o
  /Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
+ /Users/hanisha/Desktop/ft_printf42/libft/libft.h
  /Users/hanisha/Desktop/ft_printf42/main.c
+CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.o
+ /Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
+ /Users/hanisha/Desktop/ft_printf42/libft/libft.h
+ /Users/hanisha/Desktop/ft_printf42/parser/ft_format_parser.c
