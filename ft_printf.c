@@ -19,18 +19,6 @@ void	ft_putchar(char c)
 }
 */
 
-t_flags ft_struct_init()
-{
-	t_flags elem;
-
-	elem.type = 0;
-	elem.width = 0;
-	elem.minus = 0;
-	elem.zero = 0;
-	elem.dot = -1;
-	elem.star = 0;
-	return (elem);
-}
 
 int ft_str_validate(const char *format, va_list args)
 {
@@ -51,6 +39,7 @@ int ft_str_validate(const char *format, va_list args)
 			//заполняем структуру
 			flags =
 			//конвертируем тип
+
 		}
 		else
 		{

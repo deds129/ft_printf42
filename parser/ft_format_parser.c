@@ -11,10 +11,29 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+t_flags ft_struct_init()
+{
+	t_flags elem;
 
-t_flags fill_struct(const char *format, va_list args, int *i)
+	elem.type = 0;
+	elem.width = 0;
+	elem.minus = 0;
+	elem.zero = 0;
+	elem.dot = -1;
+	elem.star = 0;
+	return (elem);
+}
+
+int check_flags(t_flags flags)
+{
+	return (flags.dot > -1 || flags.minus || flags.zero || flags.width || flags.star);
+}
+
+t_flags flag (const char *format, va_list args, int *i)
 {
 	t_flags flags;
 	int j;
+
+	flags = ft_struct_init();
 
 }
