@@ -11,34 +11,36 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRCS =
+
+SRCS = ft_printf.c \
+
 OBJS = $(SRCS:.c=.o)
 
-INC = libft.h
-CC      = gcc
-AR      = ar rc
-RANL    = ranlib
-RM      = rm -f
-CFLAGS  = -Wall -Wextra -Werror
+CC = gcc
+
+CFLAGS =  -Wall -Wextra -Werror
+
+RM 		= rm -rf
 
 .c.o:
-	${CC} ${CFLAGS} -I ${INC} -c $< -o ${<:.c=.o}
+	${CC} ${GFLAG} -c $< -o ${<:.c=.o}
 
-$(NAME):	${OBJS} ${INC}
-			${AR} ${NAME} ${OBJS}
-			${RANL} ${NAME}
 
-all:		${NAME}
+all: ${NAME}
 
-bonus:		${OBJS} ${O_BONUS}
-			${AR} ${NAME} ${O_BONUS}
-			${RANL} ${NAME}
+${NAME}:    ${OBJS}
+	${CC} ${GFLAG} -c ${SRCS}
+	ar rc ${NAME} ${OBJS}
+	ranlib ${NAME}
 
 clean:
-			${RM} ${OBJS} ${O_BONUS}
+	$(MAKE) clean ./libft
+	 ${RM} ${OBJS}
 
-fclean:		clean
-			${RM} ${NAME}
+fclean: clean
+	$(MAKE) fclean ./libft
+	 ${RM} ${NAME}
 
-re:			fclean all
-.PHONY:		all clean fclean re bonus
+re: fclean all
+
+.PHONY: all clean fclean re

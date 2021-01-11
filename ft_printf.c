@@ -10,39 +10,66 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
-#include "libft/libft.h"
+#include "includes/ft_printf.h"
 
-int result; // возвращаемое значение
 
-//выводим посимвольно
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	result++;
 }
 
-int ft_printf(const char *s_format, ...)
+t_flags struct_init()
 {
-	va_list ap; //инициализиуем лист параметров
-	int i; //cчетчик для строки
+	t_flags elem;
 
-	i = 0;
+	elem.type = 0;
+	elem.width = 0;
+	elem.minus = 0;
+	elem.zero = 0;
+	elem.dot = 0;
+	elem.star = 0;
+	return (elem);
+}
+
+int ft_str_validate(const char *s_format, va_list args)
+{
+	int i;
+	int result;
+
 	result = 0;
-	va_start(ap,s_format);
+	i = 0;
 	while (s_format[i] != '\0')
 	{
 		if (s_format[i] == '%' && s_format[i + 1] != '\0' )
 		{
-
+			//обработка
 		}
 		else
-			ft_putchar(s_format[i]);
-		i++;
-
+		{
+			ft_putchar(s_format[++i]);
+			result++;
+		}
 	}
+	return  (result);
+}
+
+int ft_printf(const char *format, ...)
+{
+	va_list ap; //инициализиуем лист параметров
+	int result;
+	const char *s_format;
+
+	result = 0;
+	s_format = ft_strdup(format);
+
+	//str validate
+	result = ft_str_validate(s_format, ap);
+
+
+	va_start(ap,format);
+
+	//вывести в отдельную функцию
+
 	va_end(ap);
 	return (result);
 }

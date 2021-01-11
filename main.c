@@ -2,8 +2,7 @@
 #include "includes/ft_printf.h"
 int main()
 {
-	printf("Hello, World!\n");
-	int i = ft_printf("ddd");
-	printf("%d",i);
+	//printf("Hello, World!\n");
+	ft_printf("ddd");
 	return 0;
 }
