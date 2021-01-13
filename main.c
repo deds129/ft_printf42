@@ -3,9 +3,11 @@
 int main()
 {
 	int ret;
-	//printf("Hello, World!\n");
-	printf(" | %d\n" ,ft_printf("ddd"));
+	//printf(5);
+	//ft_printf("i am %5d years old",25);
+	printf(" | %d\n" ,ft_printf("i am %d kek",25));
+	//printf("%04d hello\n",5);
+	//printf("%.4d hello",5);
 
-	printf("%-5dhello",-7);
 	return (0);
 }

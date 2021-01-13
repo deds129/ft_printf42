@@ -35,15 +35,16 @@ int ft_str_validate(const char *format, va_list args)
 			break;
 		else if (format[i] == '%' && format[i + 1] != '\0' )
 		{
-			/*realisation*/
-			//заполняем структуру
-			flags =
+			i++;
+			flags = ft_flag_parse(format,args,&i);
+			result += ft_processor(i,flags,args);
 			//конвертируем тип
 
 		}
 		else
 		{
-			ft_putchar_fd(format[++i],1);
+			//printf("just str");
+			ft_putchar_fd(format[i++],1);
 			result++;
 		}
 	}
@@ -55,9 +56,14 @@ int ft_printf(const char *format, ...)
 	va_list ap; //инициализиуем лист параметров
 	int result;
 	result = 0;
-	//str validate
-	result = ft_str_validate(format, ap);
 	va_start(ap,format);
+
+	//заполняем в структуру + обычный тект обрабатываем
+	//возвращаемое значени: количество выведенных символов
+	ft_str_validate(format, ap);
+
+	//вывод значений обработка структуры
+	//возвращаемое значени: количество выведенных символов
 
 	//вывести в отдельную функцию
 

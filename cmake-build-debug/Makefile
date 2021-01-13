@@ -59,38 +59,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/hanisha/Desktop/Programms/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/138/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Users/hanisha/Desktop/Programms/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hanisha/Desktop/ft_printf42
+CMAKE_SOURCE_DIR = /home/deds/Desktop/hanisha/ft_printf_project/ft_printf42
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hanisha/Desktop/ft_printf42/cmake-build-debug
+CMAKE_BINARY_DIR = /home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/hanisha/Desktop/Programms/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/hanisha/Desktop/Programms/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/138/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -98,11 +87,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/138/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanisha/Desktop/ft_printf42/cmake-build-debug/CMakeFiles /Users/hanisha/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles /home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanisha/Desktop/ft_printf42/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -224,6 +224,60 @@ parser/ft_format_parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.s
 .PHONY : parser/ft_format_parser.c.s
 
+parser/set_flags.o: parser/set_flags.c.o
+
+.PHONY : parser/set_flags.o
+
+# target to build an object file
+parser/set_flags.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o
+.PHONY : parser/set_flags.c.o
+
+parser/set_flags.i: parser/set_flags.c.i
+
+.PHONY : parser/set_flags.i
+
+# target to preprocess a source file
+parser/set_flags.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.i
+.PHONY : parser/set_flags.c.i
+
+parser/set_flags.s: parser/set_flags.c.s
+
+.PHONY : parser/set_flags.s
+
+# target to generate assembly for a file
+parser/set_flags.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.s
+.PHONY : parser/set_flags.c.s
+
+processor/ft_processor.o: processor/ft_processor.c.o
+
+.PHONY : processor/ft_processor.o
+
+# target to build an object file
+processor/ft_processor.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.o
+.PHONY : processor/ft_processor.c.o
+
+processor/ft_processor.i: processor/ft_processor.c.i
+
+.PHONY : processor/ft_processor.i
+
+# target to preprocess a source file
+processor/ft_processor.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.i
+.PHONY : processor/ft_processor.c.i
+
+processor/ft_processor.s: processor/ft_processor.c.s
+
+.PHONY : processor/ft_processor.s
+
+# target to generate assembly for a file
+processor/ft_processor.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.s
+.PHONY : processor/ft_processor.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -242,6 +296,12 @@ help:
 	@echo "... parser/ft_format_parser.o"
 	@echo "... parser/ft_format_parser.i"
 	@echo "... parser/ft_format_parser.s"
+	@echo "... parser/set_flags.o"
+	@echo "... parser/set_flags.i"
+	@echo "... parser/set_flags.s"
+	@echo "... processor/ft_processor.o"
+	@echo "... processor/ft_processor.i"
+	@echo "... processor/ft_processor.s"
 .PHONY : help
 
 

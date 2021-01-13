@@ -13,3 +13,7 @@ CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.o: ../includes/ft_print
 CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.o: ../libft/libft.h
 CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.o: ../parser/ft_format_parser.c
 
+CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o: ../libft/libft.h
+CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o: ../parser/set_flags.c
+

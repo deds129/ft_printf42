@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/hanisha/Desktop/ft_printf42/ft_printf.c
+/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/ft_printf.c
 includes/ft_printf.h
-/Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
+/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/includes/ft_printf.h
 
-/Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
+/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/includes/ft_printf.h
 stdarg.h
 -
 stdlib.h
@@ -20,9 +20,9 @@ unistd.h
 stdio.h
 -
 ../libft/libft.h
-/Users/hanisha/Desktop/ft_printf42/libft/libft.h
+/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/libft/libft.h
 
-/Users/hanisha/Desktop/ft_printf42/libft/libft.h
+/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/libft/libft.h
 stdio.h
 -
 unistd.h
@@ -32,13 +32,9 @@ string.h
 stdlib.h
 -
 
-/Users/hanisha/Desktop/ft_printf42/main.c
+/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/main.c
 stdio.h
 -
 includes/ft_printf.h
-/Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
-
-/Users/hanisha/Desktop/ft_printf42/parser/ft_format_parser.c
-../includes/ft_printf.h
-/Users/hanisha/Desktop/ft_printf42/includes/ft_printf.h
+/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/includes/ft_printf.h
 

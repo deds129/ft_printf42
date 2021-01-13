@@ -35,4 +35,17 @@ typedef struct s_flags
 
 int ft_printf(const char *s_format, ...);
 
+int set_minus(t_flags *flag,int i);
+int set_zero(t_flags *flag,int i);
+int	set_dot(const char *f, t_flags *flag, int i, va_list args);
+int	set_star(t_flags *flag, int i, va_list ap);
+int	set_width(const char c, t_flags *flag, int i);
+
+t_flags ft_struct_init();
+int		is_type(char c);
+int check_flags(t_flags flags);
+t_flags ft_flag_parse (const char *format, va_list args, int *i);
+
+int ft_processor(int i,t_flags flag,va_list args);
+
 #endif
