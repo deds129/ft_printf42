@@ -55,12 +55,13 @@ int ft_printf(const char *format, ...)
 {
 	va_list ap; //инициализиуем лист параметров
 	int result;
+
 	result = 0;
 	va_start(ap,format);
 
 	//заполняем в структуру + обычный тект обрабатываем
 	//возвращаемое значени: количество выведенных символов
-	ft_str_validate(format, ap);
+	result = ft_str_validate(format,ap);
 
 	//вывод значений обработка структуры
 	//возвращаемое значени: количество выведенных символов

@@ -91,6 +91,12 @@
 		<Unit filename="/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/parser/set_flags.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
+		<Unit filename="/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_char_type.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
+		<Unit filename="/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_flag_handler.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
 		<Unit filename="/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_processor.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>

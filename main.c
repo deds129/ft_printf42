@@ -4,10 +4,13 @@ int main()
 {
 	int ret;
 	//printf(5);
-	//ft_printf("i am %5d years old",25);
-	printf(" | %d\n" ,ft_printf("i am %d kek",25));
+	printf("%d",ft_printf("i am %-c years old",'#'));
+	printf("\nStandatr printf output: ");
+	printf(" = %d",printf("i am %-c years old",'#'));
+	//printf(" | %d\n" ,ft_printf("i am %-d kek",25));
 	//printf("%04d hello\n",5);
 	//printf("%.4d hello",5);
+	//printf("%0c", '*');
 
 	return (0);
 }

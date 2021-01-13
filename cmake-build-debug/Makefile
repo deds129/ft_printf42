@@ -251,6 +251,60 @@ parser/set_flags.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.s
 .PHONY : parser/set_flags.c.s
 
+processor/ft_char_type.o: processor/ft_char_type.c.o
+
+.PHONY : processor/ft_char_type.o
+
+# target to build an object file
+processor/ft_char_type.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.o
+.PHONY : processor/ft_char_type.c.o
+
+processor/ft_char_type.i: processor/ft_char_type.c.i
+
+.PHONY : processor/ft_char_type.i
+
+# target to preprocess a source file
+processor/ft_char_type.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.i
+.PHONY : processor/ft_char_type.c.i
+
+processor/ft_char_type.s: processor/ft_char_type.c.s
+
+.PHONY : processor/ft_char_type.s
+
+# target to generate assembly for a file
+processor/ft_char_type.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.s
+.PHONY : processor/ft_char_type.c.s
+
+processor/ft_flag_handler.o: processor/ft_flag_handler.c.o
+
+.PHONY : processor/ft_flag_handler.o
+
+# target to build an object file
+processor/ft_flag_handler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.o
+.PHONY : processor/ft_flag_handler.c.o
+
+processor/ft_flag_handler.i: processor/ft_flag_handler.c.i
+
+.PHONY : processor/ft_flag_handler.i
+
+# target to preprocess a source file
+processor/ft_flag_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.i
+.PHONY : processor/ft_flag_handler.c.i
+
+processor/ft_flag_handler.s: processor/ft_flag_handler.c.s
+
+.PHONY : processor/ft_flag_handler.s
+
+# target to generate assembly for a file
+processor/ft_flag_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.s
+.PHONY : processor/ft_flag_handler.c.s
+
 processor/ft_processor.o: processor/ft_processor.c.o
 
 .PHONY : processor/ft_processor.o
@@ -299,6 +353,12 @@ help:
 	@echo "... parser/set_flags.o"
 	@echo "... parser/set_flags.i"
 	@echo "... parser/set_flags.s"
+	@echo "... processor/ft_char_type.o"
+	@echo "... processor/ft_char_type.i"
+	@echo "... processor/ft_char_type.s"
+	@echo "... processor/ft_flag_handler.o"
+	@echo "... processor/ft_flag_handler.i"
+	@echo "... processor/ft_flag_handler.s"
 	@echo "... processor/ft_processor.o"
 	@echo "... processor/ft_processor.i"
 	@echo "... processor/ft_processor.s"

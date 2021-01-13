@@ -17,3 +17,15 @@ CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o: ../libft/libft.h
 CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o: ../parser/set_flags.c
 
+CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.o: ../libft/libft.h
+CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.o: ../processor/ft_char_type.c
+
+CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.o: ../libft/libft.h
+CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.o: ../processor/ft_flag_handler.c
+
+CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.o: ../libft/libft.h
+CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.o: ../processor/ft_processor.c
+
