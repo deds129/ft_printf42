@@ -36,6 +36,7 @@ int		set_star(t_flags *flag, int i, va_list ap)
 	if (flag->width < 0)
 	{
 		flag->minus = 1;
+		flag->zero = 0;
 		flag->width *= -1;
 	}
 	return (i + 1);

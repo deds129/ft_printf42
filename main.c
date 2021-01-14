@@ -5,11 +5,18 @@ int main()
 	int ret;
 
 						/*char*/
-	//printf("%d",ft_printf("i am %c years old",'5'));
-	//printf("\nStandatr printf output: ");
-	//printf(" = %d",printf("i am %c years old",'5'));
+//	printf("original printf\n");
+//	ret = printf("%4c",'*'); printf("$ return: %d",ret);
+//	printf("\n");
+//	ret = printf("%*c",'*',-2); printf("$ return: %d",ret);
+//
+//	printf("\nmyprintf\n");
+//	ret = ft_printf("%4c",'*'); printf("$ return: %d",ret);
+//	printf("\n");
+//	ret = ft_printf("%*c",'*',-2); printf("$ return: %d",ret);
 
-					/*string*/
+
+	/*string*/
 	 //ret = printf("%20.5s","Hello world"); printf("$ return: %d",ret);
 	 //printf("\n");
 	// ret = printf("%20s","Hello world"); printf("$ return: %d",ret);
@@ -29,19 +36,22 @@ int main()
 	printf("\n");
 	ret = printf("%02.3%"); printf("$ return: %d",ret);
 	printf("\n");
-	ret = printf("%0*.*%",4,3); printf("$ return: %d",ret);
-
+	ret = printf("%0*.*%",-4,3); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%-*.*%",-4,3); printf("$ return: %d",ret);
 
 	printf("\n\nmy printf\n");
-	ret = printf("%%"); printf("$ return: %d",ret);
+	ret = ft_printf("%%"); printf("$ return: %d",ret);
 	printf("\n");
-	ret = printf("%3%"); printf("$ return: %d",ret);
+	ret = ft_printf("%3%"); printf("$ return: %d",ret);
 	printf("\n");
 	ret = ft_printf("%-2.3%"); printf("$ return: %d",ret);
 	printf("\n");
 	ret = ft_printf("%02.3%"); printf("$ return: %d",ret);
 	printf("\n");
-	ret = ft_printf("%0*.*%",4,3); printf("$ return: %d",ret);
+	ret = ft_printf("%0*.*%",-4,3); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%-*.*%",-4,3); printf("$ return: %d",ret);
 
 
 	//ret = ft_printf("%20.5s","Hello world"); printf("$ return: %d",ret);

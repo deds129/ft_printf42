@@ -44,13 +44,15 @@ t_flags ft_flag_parse (const char *format, va_list args, int *i)
 	flags = ft_struct_init();
 	while (!is_type(format[j]))
 	{
+		if (format[j] == '0' &&  flags.width == 0 && flags.minus == 0) //надо ли
+			flags.zero = 1; //надо ли
 		if (format[j] == '.')
 			j = set_dot(format, &flags, j, args);
 		if (format[j] == '*')
 			j = set_star(&flags, j, args);
 		if (format[j] == '-')
 			j = set_minus(&flags, j);
-		if (format[j] == '0' && !flags.minus && !flags.width) //исключающие
+		if (format[j] == '0' && !flags.minus && flags.width < 0) //исключающие
 			// друг друга флаги
 			j = set_zero(&flags, j);
 		if (ft_isdigit(format[j]))
