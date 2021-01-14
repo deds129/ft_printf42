@@ -48,7 +48,9 @@ t_flags ft_flag_parse (const char *format, va_list args, int *i);
 
 int ft_processor(int i,t_flags flag,va_list args);
 
-int ft_char_type(va_list args,t_flags flag);
+int ft_char_type(va_list args,t_flags flags);
+int ft_string_type(va_list args,t_flags flags);
+int ft_perc_type(t_flags flags);
 int ft_flag_handler(int width, int minus, int zero);
 
 #endif

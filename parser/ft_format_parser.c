@@ -58,8 +58,8 @@ t_flags ft_flag_parse (const char *format, va_list args, int *i)
 	}
 	flags.type = format[j++];
 	*i = j;
-	printf("-----flags: width: %d | zero %d | minus %d | star %d | dot %d | "
-		"type %c| length of string: ",
+	printf("$ flags: width: %d | zero %d | minus %d | star %d | dot %d | "
+		"type %c|",
 		flags.width,flags.zero,flags.minus, flags.star, flags.dot, flags.type);
 	return (flags);
 
