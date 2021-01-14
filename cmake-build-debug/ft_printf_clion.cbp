@@ -100,6 +100,9 @@
 		<Unit filename="/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_processor.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
+		<Unit filename="/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_string_type.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
 		<Unit filename="/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

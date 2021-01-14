@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_char_type.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.o"
   "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_flag_handler.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.o"
   "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_processor.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.o"
+  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_string_type.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_string_type.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

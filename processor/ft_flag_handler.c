@@ -16,6 +16,6 @@ int ft_flag_handler(int width, int minus, int zero)
 		width--;
 		count++;
 	}
-	return 0;
+	return count;
 }
 

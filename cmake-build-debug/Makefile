@@ -332,6 +332,33 @@ processor/ft_processor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.s
 .PHONY : processor/ft_processor.c.s
 
+processor/ft_string_type.o: processor/ft_string_type.c.o
+
+.PHONY : processor/ft_string_type.o
+
+# target to build an object file
+processor/ft_string_type.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_string_type.c.o
+.PHONY : processor/ft_string_type.c.o
+
+processor/ft_string_type.i: processor/ft_string_type.c.i
+
+.PHONY : processor/ft_string_type.i
+
+# target to preprocess a source file
+processor/ft_string_type.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_string_type.c.i
+.PHONY : processor/ft_string_type.c.i
+
+processor/ft_string_type.s: processor/ft_string_type.c.s
+
+.PHONY : processor/ft_string_type.s
+
+# target to generate assembly for a file
+processor/ft_string_type.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/processor/ft_string_type.c.s
+.PHONY : processor/ft_string_type.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -362,6 +389,9 @@ help:
 	@echo "... processor/ft_processor.o"
 	@echo "... processor/ft_processor.i"
 	@echo "... processor/ft_processor.s"
+	@echo "... processor/ft_string_type.o"
+	@echo "... processor/ft_string_type.i"
+	@echo "... processor/ft_string_type.s"
 .PHONY : help
 
 
