@@ -19,14 +19,29 @@ int main()
 	//ret = ft_printf("%20s","Hello world"); printf("$ return: %d",ret);
 
 	/*percent*/
-	ret = ft_printf("%%"); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%-2.3%"); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%02.3%"); printf("$ return: %d",ret);
-//
-//	printf("\n");
-//	ret = printf("%0*.*%",4,-1); printf("$ return: %d",ret);
+
+	printf("original printf\n");
+	ret = printf("%%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%3%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%-2.3%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%02.3%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%0*.*%",4,3); printf("$ return: %d",ret);
+
+
+	printf("\n\nmy printf\n");
+	ret = printf("%%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%3%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%-2.3%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%02.3%"); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%0*.*%",4,3); printf("$ return: %d",ret);
 
 
 	//ret = ft_printf("%20.5s","Hello world"); printf("$ return: %d",ret);
