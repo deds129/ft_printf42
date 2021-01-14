@@ -22,6 +22,8 @@ int ft_perc_type(t_flags flags)
 		ft_putchar_fd('%', 1);
 		return (++ret_value);
 	}
+	if (flags.minus)
+		ft_putchar_fd('%',1);
 	ret_value = ft_flag_handler(flags.width,flags.minus,flags.zero);
 	if (!flags.minus)
 		ft_putchar_fd('%',1);
