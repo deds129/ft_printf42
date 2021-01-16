@@ -6,8 +6,7 @@ int ft_flag_handler(int width, int minus, int zero)
 
 	count = 0;
 
-	width -=1;
-	while (width > 0)
+	while (width - minus > 0)
 	{
 		if (zero == 1)
 			ft_putchar_fd('0',1);
