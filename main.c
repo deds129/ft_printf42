@@ -67,16 +67,16 @@ int main()
 	printf("\n");
 	ret = printf("%.20s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
-	ret = printf("%5s","Hello world"); printf("$ return: %d",ret);
+	ret = printf("%50s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
-	ret = printf("%-5s","Hello world"); printf("$ return: %d",ret);
+	ret = printf("%-50s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
 	ret = printf("%-5.3s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
 	ret = printf("%-.3s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
 	char *a = NULL;
-	ret = ft_printf("%.3s",a); printf("$ return: %d",ret);
+	ret = printf("%.3s",a); printf("$ return: %d",ret);
 
 	printf("\n\nmy_printf\n");
 	ret = ft_printf("%-20.2s","Hello world"); printf("$ return: %d",ret);
@@ -91,17 +91,16 @@ int main()
 	printf("\n");
 	ret = ft_printf("%.20s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
-	ret = ft_printf("%5s","Hello world"); printf("$ return: %d",ret);
+	ret = ft_printf("%50s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
-	ret = ft_printf("%-5s","Hello world"); printf("$ return: %d",ret);
+	ret = ft_printf("%-50s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
 	ret = ft_printf("%-5.3s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
 	ret = ft_printf("%-.3s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
 	char *a1 = NULL;
-	ret = ft_printf("%.3s",a1); printf("$ return: %d",ret);
-	printf("\n");
+	ret = printf("%.3s",a1); printf("$ return: %d",ret);
 
 
 	//printf(" | %d\n" ,ft_printf("i am %-d kek",25));

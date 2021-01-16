@@ -9,7 +9,7 @@ int ft_processor(int i,t_flags flags,va_list args)
 		i = ft_perc_type(flags);
 	else if (flags.type == 's')
 		i = ft_string_type(va_arg(args,char *),flags);
-
+/*
 	else if (flags.type == 'p')
 		i = ft_pointer_type(va_arg(args, unsigned long long),flags);
 	else if (flags.type == 'd' || flags.type == 'i')
@@ -20,6 +20,7 @@ int ft_processor(int i,t_flags flags,va_list args)
 		i = ft_hexint_type(va_arg(args, unsigned int), 1, flags);
 	else if(flags.type == 'X')
 		i = ft_hexint_type(va_arg(args, unsigned int), 0, flags);
+*/
 
 	return i;
 }
