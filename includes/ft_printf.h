@@ -51,6 +51,9 @@ int ft_processor(int i,t_flags flag,va_list args);
 int ft_char_type(char c,t_flags flags);
 int ft_string_type(char *str,t_flags flags);
 int ft_perc_type(t_flags flags);
+int ft_integer_type(int i,t_flags flags);
+int ft_pointer_type(unsigned long long ptr, t_flags flags);
+
 int ft_flag_handler(int width, int minus, int zero);
 
 #endif

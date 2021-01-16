@@ -9,6 +9,20 @@ int ft_strdotout(char *str,int dot)
 	return (i);
 }
 
+int ft_minus_handle(int ret_value,char *str,t_flags flags)
+{
+	if (flags.dot < 0)
+	{
+		ret_value += ft_strdotout(str,ft_strlen(str));
+		ret_value += ft_flag_handler(flags.width - ft_strlen(str)+1,1,0);
+	}
+	else
+	{
+		ret_value+= ft_strdotout(str,flags.dot);
+		ret_value+= ft_flag_handler(flags.width - flags.dot + 1,1,0);
+	}
+	return (ret_value);
+}
 
 
 int ft_string_type(char *str,t_flags flags)
@@ -18,7 +32,6 @@ int ft_string_type(char *str,t_flags flags)
 	ret_value = 0;
 	if (!str)
 		str = "(null)";
-
 	if (flags.dot >= 0 && flags.dot > ft_strlen(str))
 		flags.dot = ft_strlen(str);
 	if (flags.minus == 0)
@@ -35,23 +48,6 @@ int ft_string_type(char *str,t_flags flags)
 		}
 	}
 	else
-	{
-		if (flags.dot < 0)
-		{
-			//dot
-			ret_value += ft_strdotout(str,ft_strlen(str));
-			ret_value += ft_flag_handler(flags.width - ft_strlen(str)+1,1,0);
-
-			//!dot
-		}
-		else
-		{
-			ret_value+= ft_strdotout(str,flags.dot);
-			ret_value+= ft_flag_handler(flags.width - flags.dot + 1,1,0);
-		}
-	}
-
-
-
+		ret_value += ft_minus_handle(ret_value,str,flags);
 	return (ret_value);
 }
