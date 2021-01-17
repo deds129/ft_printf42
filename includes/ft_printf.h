@@ -55,5 +55,6 @@ int ft_integer_type(int i,t_flags flags);
 int ft_pointer_type(unsigned long long ptr, t_flags flags);
 
 int ft_flag_handler(int width, int minus, int zero);
+int ft_dot_out(char *str,int dot);
 
 #endif

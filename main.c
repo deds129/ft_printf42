@@ -99,11 +99,21 @@ int main()
 	printf("\n");
 	ret = ft_printf("%-.3s","Hello world"); printf("$ return: %d",ret);
 	printf("\n");
+
 	char *a1 = NULL;
 	ret = printf("%.3s",a1); printf("$ return: %d",ret);
 */
 
-	ret = ft_printf("%22.10d",-211134); printf("$ return: %d",ret);
+	//ret = printf("%22.10d",-211134); printf("$ return: %d",ret);
+	printf("standart printf\n");
+	ret = printf("%-13d",2147); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%-13d",-2147); printf("$ return: %d",ret);
+
+	printf("\nmy printf\n");
+	ret = ft_printf("%-13d",2147); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%-13d",-2147); printf("$ return: %d",ret);
 	printf("\n");
 	/*
 	ret = printf("%d",-323); printf("$ return: %d",ret);

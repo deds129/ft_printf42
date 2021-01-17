@@ -1,24 +1,14 @@
 #include "../includes/ft_printf.h"
-int ft_strdotout(char *str,int dot)
-{
-	int i;
-
-	i = 0;
-	while (str[i] && i < dot)
-		ft_putchar_fd(str[i++],1);
-	return (i);
-}
-
 int ft_minus_handle(int ret_value,char *str,t_flags flags)
 {
 	if (flags.dot < 0)
 	{
-		ret_value += ft_strdotout(str,ft_strlen(str));
+		ret_value += ft_dot_out(str,ft_strlen(str));
 		ret_value += ft_flag_handler(flags.width - ft_strlen(str)+1,1,0);
 	}
 	else
 	{
-		ret_value+= ft_strdotout(str,flags.dot);
+		ret_value+= ft_dot_out(str,flags.dot);
 		ret_value+= ft_flag_handler(flags.width - flags.dot + 1,1,0);
 	}
 	return (ret_value);
@@ -39,12 +29,12 @@ int ft_string_type(char *str,t_flags flags)
 		if (flags.dot < 0)
 		{
 			ret_value += ft_flag_handler(flags.width - ft_strlen(str)+1,1,0);
-			ret_value += ft_strdotout(str,ft_strlen(str));
+			ret_value += ft_dot_out(str,ft_strlen(str));
 		}
 		else
 		{
 			ret_value += ft_flag_handler(flags.width - flags.dot,0,0);
-			ret_value += ft_strdotout(str,flags.dot);
+			ret_value += ft_dot_out(str,flags.dot);
 		}
 	}
 	else
