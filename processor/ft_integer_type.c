@@ -1,6 +1,7 @@
 #include "../includes/ft_printf.h"
 //[−2 147 483 648, +2 147 483 647]
-//длина указанного целого числа с учетом -
+
+
 int ft_digitlen(int num)
 {
 	int len = 0;
@@ -15,8 +16,10 @@ int ft_digitlen(int num)
 	return (len);
 }
 
-void	ft_newputnbr(int n)
+//печатает число без 0 и возвращает длину числа с учетом знака минус
+int	ft_newputnbr(int n)
 {
+	//кейс с крайним значением int нужно ли переводить в long?
 	unsigned int	n1;
 
 	n1 = 0;
@@ -30,57 +33,37 @@ void	ft_newputnbr(int n)
 	if (n1 >= 10)
 		ft_newputnbr(n1 / 10);
 	ft_putchar_fd(n1 % 10 + '0', 1);
+	return (ft_digitlen(n));
 }
 
 
 
-int ft_integer_type(int i, t_flags flags)
+int ft_integer_type(int i, t_flags f)
 {
 	int ret_value;
-	ret_value = ft_digitlen(i);
-	if (flags.dot < 0)
-	{
-		if(flags.minus == 1)
-		{
-			if (i < 0)
-			{
-				ft_putchar_fd('-',1);
-				ret_value++;
-				ft_newputnbr(i);
-				ret_value += ft_flag_handler(flags.width - ft_digitlen(i),flags.minus,flags.zero);
-			}
-			else
-			{
-				ft_newputnbr(i);
-				ret_value += ft_flag_handler(flags.width - ft_digitlen(i) +1,flags.minus,flags.zero);
-			}
+	ret_value = 0;
 
-		}
-		else if (flags.zero == 1)
-		{
-			if (i < 0)
-			{
-				ft_putchar_fd('-',1);
-				ret_value++;
-				ret_value += ft_flag_handler(flags.width - ft_digitlen(i) - 1,flags.minus,flags.zero);
-				ft_newputnbr(i);
-			}
-			else
-			{
-				ret_value += ft_flag_handler(flags.width - ft_digitlen(i),flags.minus,flags.zero);
-				ft_newputnbr(i);
-			}
-		}
+	//case 0
+	if (i == 0 && f.dot == 0)
+		ret_value += ft_flag_handler(10,0,0);
+
+	// !width && !dot case
+	if (f.dot < 0 && f.width == 0)
+	{
+		if (i > 0)
+			ret_value += ft_newputnbr(i);
 		else
 		{
-			ret_value += ft_flag_handler(flags.width - ft_digitlen(i) - 1 ,flags.minus,flags.zero) + 1;
-			ft_putnbr_fd(i,1);
+			ft_putchar_fd('-', 1);
+			ret_value += ft_newputnbr(i) + 1;
 		}
-		return (ret_value);
+	}
+	//width != 0 && !dot case
+	if (f.width != 0 && f.dot < 0)
+	{
+
 	}
 
-	//dot?
-	//скомпоновать / вынести в отдельные функции
 	return (ret_value);
 }
 
