@@ -48,6 +48,8 @@ int ft_integer_type(int i, t_flags f)
 		ret_value += ft_flag_handler(10,0,0);
 
 	// !width && !dot case
+
+	//обработать флаги
 	if (f.dot < 0 && f.width == 0)
 	{
 		if (i > 0)
@@ -58,10 +60,57 @@ int ft_integer_type(int i, t_flags f)
 			ret_value += ft_newputnbr(i) + 1;
 		}
 	}
+
+
+
 	//width != 0 && !dot case
 	if (f.width != 0 && f.dot < 0)
 	{
+		if (i > 0)
+		{
+			// 3 варианта флагов -, 0, ' '
+			if (f.minus == 0 && f.zero == 0)
+			{
+				ret_value += ft_flag_handler(f.width - ft_digitlen(i),0,0);
+				ret_value += ft_newputnbr(i);
+			}
+			else if (f.minus == 1)
+			{
+				ret_value += ft_newputnbr(i);
+				ret_value += ft_flag_handler(f.width - ft_digitlen(i) + 1,1,0);
+			}
+			else if (f.zero == 1)
+			{
+				ret_value += ft_flag_handler(f.width - ft_digitlen(i),0,1);
+				ret_value += ft_newputnbr(i);
+			}
+		}
+		else
+		{
+			if (f.minus == 0 && f.zero == 0)
+			{
+				ret_value += ft_flag_handler(f.width - ft_digitlen(i) - 1,0,0);
+				ft_putchar_fd('-', 1);
+				ret_value += ft_newputnbr(i) + 1;
+			}
+			else if (f.minus == 1)
+			{
+				ft_putchar_fd('-', 1);
+				ret_value += ft_newputnbr(i) + 1;
+				ret_value += ft_flag_handler(f.width - ft_digitlen(i),1,0);
+			}
+			else if (f.zero == 1)
+			{
+				ft_putchar_fd('-', 1);
+				ret_value += ft_flag_handler(f.width - ft_digitlen(i) - 1,0,1);
+				ret_value += ft_newputnbr(i) + 1;
+			}
 
+		}
+//		else
+//		{
+//
+//		}
 	}
 
 	return (ret_value);
