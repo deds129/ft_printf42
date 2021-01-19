@@ -47,9 +47,9 @@ int ft_integer_type(int i, t_flags f)
 	if (i == 0 && f.dot == 0)
 		ret_value += ft_flag_handler(10,0,0);
 
-	// !width && !dot case
 
-	//обработать флаги
+
+	// !width && !dot case
 	if (f.dot < 0 && f.width == 0)
 	{
 		if (i > 0)
@@ -60,7 +60,6 @@ int ft_integer_type(int i, t_flags f)
 			ret_value += ft_newputnbr(i) + 1;
 		}
 	}
-
 
 
 	//width != 0 && !dot case
@@ -105,14 +104,65 @@ int ft_integer_type(int i, t_flags f)
 				ret_value += ft_flag_handler(f.width - ft_digitlen(i) - 1,0,1);
 				ret_value += ft_newputnbr(i) + 1;
 			}
-
 		}
-//		else
-//		{
-//
-//		}
 	}
 
+//	if (flags.dot >= 0 && flags.dot > ft_strlen(str))
+//		flags.dot = ft_strlen(str);
+//	width !=0 && dot > -1 case
+//ret = ft_printf("%*.15d",424342242,0); printf("$ return: %d",ret);
+	if (f.width >= 0 && f.dot > -1)
+	{
+		if (i > 0)
+		{
+			//"%0.15d",423232342 доп нулями
+			if (ft_digitlen(i) < f.dot)
+			{
+				if (f.width <= f.dot)
+					f.width = f.dot;
+				if (f.width >= f.dot)
+				{
+					if (f.minus == 1)
+					{
+						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1);
+						ret_value += ft_newputnbr(i);
+						ret_value += ft_flag_handler(f.width - f.dot,0,0);
+					}
+					else
+					{
+						ret_value += ft_flag_handler(f.width - f.dot,0,0);
+						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1);
+						ret_value += ft_newputnbr(i);
+					}
+				}
+			}
+		}
+		else
+		{
+			if (ft_digitlen(i) < f.dot)
+			{
+				if (f.width <= f.dot)
+					f.width = f.dot;
+				if (f.width >= f.dot)
+				{
+					if (f.minus == 1)
+					{
+						ft_putchar_fd('-',1);
+						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1);
+						ret_value += ft_newputnbr(i);
+						ret_value += ft_flag_handler(f.width - f.dot,0,0);
+					}
+					else
+					{
+						ret_value += ft_flag_handler(f.width - f.dot - 1,0,0);
+						ft_putchar_fd('-',1);
+						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1) + 1;
+						ret_value += ft_newputnbr(i);
+					}
+				}
+			}
+		}
+	}
 	return (ret_value);
 }
 
