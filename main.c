@@ -236,32 +236,63 @@ int main()
 //	ret = ft_printf("%5d",-424342242); printf("$ return: %d",ret);
 //	printf("\n");
 
-//if (f.width >= 0 && f.dot > -1)
+
+	printf("\n============== width != 0 && !dot case ===============\n");
 	ret = printf("%15.20d",-24); printf("$ return: %d",ret);
 	printf("\n");
+	ret = printf("%15.20d",24); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%-13.15d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%02.2d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%-.15d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%01.15d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%12.15d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%34.5d",424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%-.5d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%0.5d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%-20.d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = printf("%6.d",-424342242); printf("$ return: %d",ret);
+	printf("\n\n");
+	ret = printf("%.5d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+
+
+	printf("\n----------------my printf-----------------------\n");
 	ret = ft_printf("%15.20d",-24); printf("$ return: %d",ret);
 	printf("\n");
-//	ret = printf("%-.15d",423232342); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%02.2d",423232342); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%-.15d",-424342242); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%0.15d",-424342242); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%.15d",-424342242); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%.5d",424342242); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%-.5d",423232342); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%0.5d",423232342); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%-.5d",-424342242); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = printf("%0.5d",-424342242); printf("$ return: %d",ret);
-//	printf("\n\n");
-//	ret = printf("%.5d",-424342242); printf("$ return: %d",ret);
-//	printf("\n");
+	ret = ft_printf("%15.20d",24); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%-13.15d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%02.2d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%-.15d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%01.15d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%12.15d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%34.5d",424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%-.5d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%0.5d",423232342); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%-20.d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%6.d",-424342242); printf("$ return: %d",ret);
+	printf("\n\n");
+	ret = ft_printf("%.5d",-424342242); printf("$ return: %d",ret);
+	printf("\n");
+
 	return (0);
 }
