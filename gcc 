@@ -1,0 +1,1 @@
+gcc main.c ft_printf.c libft/ft_putchar_fd.c libft/ft_isdigit.c parser/ft_format_parser.c parser/set_flags.c processor/ft_char_type.c processor/ft_flag_handler.c processor/ft_perc_type.c processor/ft_processor.c processor/ft_string_type.c libft/ft_putstr_fd.c libft/ft_strlen.c
