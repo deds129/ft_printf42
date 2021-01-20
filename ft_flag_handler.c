@@ -16,6 +16,7 @@ int ft_flag_handler(int width, int minus, int zero)
 	return (count);
 }
 
+
 int ft_dot_out(char *str,int dot)
 {
 	int i;
