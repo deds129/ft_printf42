@@ -11,36 +11,51 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
+CC = gcc
+RM 		= rm -rf
+INCL = ./includes/
 
 SRCS = ft_printf.c \
+		ft_format_parser.c \
+		ft_set_flags.c\
+		ft_flag_handler.c\
+		ft_integer_type.c\
+		ft_perc_type.c\
+		ft_pointer_type.c\
+		ft_processor.c\
+		ft_string_type.c
+
+CFLAGS =  -Wall -Wextra -Werror -I ${INCL} -c
 
 OBJS = $(SRCS:.c=.o)
-
-CC = gcc
-
-CFLAGS =  -Wall -Wextra -Werror
-
-RM 		= rm -rf
-
-.c.o:
-	${CC} ${GFLAG} -c $< -o ${<:.c=.o}
 
 
 all: ${NAME}
 
-${NAME}:    ${OBJS}
-	${CC} ${GFLAG} -c ${SRCS}
-	ar rc ${NAME} ${OBJS}
+${NAME}: comp_lib ${OBJS}
+	ar rc ${NAME} ${OBJS} ./libft/*.o
 	ranlib ${NAME}
 
+comp_lib:
+	$(MAKE) -C ./libft/
+
 clean:
-	$(MAKE) clean ./libft
-	 ${RM} ${OBJS}
+	${RM} ${OBJS}
+	$(MAKE) clean -C ./libft
+
 
 fclean: clean
-	$(MAKE) fclean ./libft
-	 ${RM} ${NAME}
+	${RM} ${NAME}
+	$(MAKE) fclean -C ./libft
+
 
 re: fclean all
 
 .PHONY: all clean fclean re
+
+
+
+
+
+
+
