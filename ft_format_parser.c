@@ -30,10 +30,6 @@ int		is_type(char c)
 			c == 'u' || c == 'x' || c == 'X' || c == '%');
 }
 
-int check_flags(t_flags flags)
-{
-	return (flags.dot > -1 || flags.minus || flags.zero || flags.width || flags.star);
-}
 
 t_flags ft_flag_parse (const char *format, va_list args, int *i)
 {

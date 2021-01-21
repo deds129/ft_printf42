@@ -10,20 +10,21 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
-CC = gcc
-RM 		= rm -rf
-INCL = ./includes/
+NAME	=	libftprintf.a
+CC		=	gcc
+RM		=	rm -rf
+INCL	=	./includes/
 
-SRCS = ft_printf.c \
-		ft_format_parser.c \
-		ft_set_flags.c\
-		ft_flag_handler.c\
-		ft_integer_type.c\
-		ft_perc_type.c\
-		ft_pointer_type.c\
-		ft_processor.c\
-		ft_string_type.c
+SRCS	=	ft_printf.c\
+			ft_char_type.c\
+			ft_flag_handler.c\
+			ft_format_parser.c\
+			ft_integer_type.c\
+			ft_perc_type.c\
+			ft_pointer_type.c\
+			ft_processor.c\
+			ft_set_flags.c\
+			ft_string_type.c
 
 CFLAGS =  -Wall -Wextra -Werror -I ${INCL} -c
 

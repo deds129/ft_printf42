@@ -1,5 +1,7 @@
 #include "includes/ft_printf.h"
 
+//выводит в консоль пробелы или 0 нули в зависимости от перерданных флагов
+//возвращает количество выведенных символов
 int ft_flag_handler(int width, int minus, int zero)
 {
 	int count;
@@ -16,14 +18,4 @@ int ft_flag_handler(int width, int minus, int zero)
 	return (count);
 }
 
-
-int ft_dot_out(char *str,int dot)
-{
-	int i;
-
-	i = 0;
-	while (str[i] && i < dot)
-		ft_putchar_fd(str[i++],1);
-	return (i);
-}
 

@@ -35,26 +35,27 @@ typedef struct s_flags
 
 int ft_printf(const char *s_format, ...);
 
-int set_minus(t_flags *flag,int i);
-int set_zero(t_flags *flag,int i);
-int	set_dot(const char *f, t_flags *flag, int i, va_list args);
-int	set_star(t_flags *flag, int i, va_list ap);
-int	set_width(const char c, t_flags *flag, int i);
-
+int ft_str_validate(const char *format, va_list args);
+int ft_flag_handler(int width, int minus, int zero);
 t_flags ft_struct_init();
 int		is_type(char c);
-int check_flags(t_flags flags);
 t_flags ft_flag_parse (const char *format, va_list args, int *i);
-
-int ft_processor(int i,t_flags flag,va_list args);
-
+int ft_digitlen(int num);
+int	ft_newputnbr(int n);
+int ft_integer_type(int i, t_flags f);
 int ft_char_type(char c,t_flags flags);
-int ft_string_type(char *str,t_flags flags);
 int ft_perc_type(t_flags flags);
-int ft_integer_type(int i,t_flags flags);
 int ft_pointer_type(unsigned long long ptr, t_flags flags);
-
-int ft_flag_handler(int width, int minus, int zero);
+int ft_processor(int i,t_flags flags,va_list args);
+int set_minus(t_flags *flag,int i);
+int set_zero(t_flags *flag,int i);
+int		set_dot(const char *form, t_flags *flag, int i, va_list args);
+int		set_star(t_flags *flag, int i, va_list ap);
+int		set_width(const char c, t_flags *flag, int i);
+int ft_minus_handle(int ret_value,char *str,t_flags flags);
 int ft_dot_out(char *str,int dot);
+int ft_string_type(char *str,t_flags flags);
+
+
 
 #endif
