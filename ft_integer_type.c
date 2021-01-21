@@ -4,13 +4,16 @@
 
 int ft_digitlen(int num)
 {
-	int len = 0;
+	int len;
+
+	len = 0;
+	if(num == 0)
+		return 1;
 	while (num)
 	{
 		num/=10;
 		len++;
 	}
-	//для нуля
 	if (num < 0)
 		len++;
 	return (len);
@@ -24,10 +27,7 @@ int	ft_newputnbr(int n)
 
 	n1 = 0;
 	if (n < 0)
-	{
-		//ft_putchar_fd('-', fd);
 		n1 = n * -1;
-	}
 	else
 		n1 = (unsigned int)n;
 	if (n1 >= 10)
@@ -111,13 +111,13 @@ int ft_integer_type(int i, t_flags f)
 
 	if (f.width >= 0 && f.dot > -1)
 	{
+		if (f.width <= f.dot)
+			f.width = f.dot;
 		if (i >= 0)
 		{
-			//"%0.15d",423232342 доп нулями
+
 			if (ft_digitlen(i) < f.dot)
 			{
-				if (f.width <= f.dot)
-					f.width = f.dot;
 				if (f.width >= f.dot)
 				{
 					if (f.minus == 1)
@@ -129,18 +129,22 @@ int ft_integer_type(int i, t_flags f)
 					else
 					{
 						ret_value += ft_flag_handler(f.width - f.dot,0,0);
-						ret_value += ft_flag_handler(f.dot - ft_digitlen(i) - 1,0,1);
-						ret_value += ft_newputnbr(i) + 1;
+						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1);
+						ret_value += ft_newputnbr(i);
 					}
 				}
+			}
+			else
+			{
+				ret_value += ft_flag_handler(f.width - ft_digitlen(i),0,0);
+				ret_value += ft_newputnbr(i);
 			}
 		}
 		else
 		{
 			if (ft_digitlen(i) <= f.dot)
 			{
-				if (f.width <= f.dot)
-					f.width = f.dot;
+
 				if (f.width >= f.dot)
 				{
 					if (f.minus == 1)

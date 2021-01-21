@@ -5,6 +5,7 @@
 int ft_flag_handler(int width, int minus, int zero)
 {
 	int count;
+    
 	count = 0;
 	while (width - minus > 0)
 	{
