@@ -1,6 +1,25 @@
 #include "includes/ft_printf.h"
 //[−2 147 483 648, +2 147 483 647]
+int	ft_iflag(int width, int num, int zero)
+{
+	int count;
 
+	count = 0;
+	if(num < 0)
+	{
+		width--;
+	}
+	while (width >= 0)
+	{
+		if (zero == 1)
+			ft_putchar_fd('0', 1);
+		else
+			ft_putchar_fd(' ', 1);
+		width--;
+		count++;
+	}
+	return (count);
+}
 
 int ft_digitlen(int num)
 {
@@ -9,13 +28,13 @@ int ft_digitlen(int num)
 	len = 0;
 	if(num == 0)
 		return 1;
+	if (num < 0)
+		len++;
 	while (num)
 	{
 		num/=10;
 		len++;
 	}
-	if (num < 0)
-		len++;
 	return (len);
 }
 
@@ -41,129 +60,31 @@ int	ft_newputnbr(int n)
 int ft_integer_type(int i, t_flags f)
 {
 	int ret_value;
+	int dlen;
+
 	ret_value = 0;
+	dlen = ft_digitlen(i);
 
 	//case 0
 	if (i == 0 && f.dot == 0)
 	{
 		ret_value += ft_flag_handler(f.width, 0, 0);
+		return  ret_value;
 	}
-
-
-
-	// !width && !dot case
-	if (f.dot < 0 && f.width < 0)
+	//кода не нужно добивать нулями
+	else if (f.width && (f.dot <= dlen || f.dot <= -1))
 	{
-		if (i >= 0)
-			ret_value += ft_newputnbr(i);
-		else
+		if (f.minus == 0 && f.zero == 0)
 		{
-			ft_putchar_fd('-', 1);
-			ret_value += ft_newputnbr(i) + 1;
+			ft_flag_handler(f.width - dlen,0,0);
+			ft_putnbr_fd(i,1);
+			ret_value += f.width;
+		}
+		else if (f.minus)
+		{
+			ft_putnbr_fd(i,1);
+			ret_value += ft_iflag(f.width - dlen,i,0) + dlen;
 		}
 	}
-
-
-	//width != 0 && !dot case
-	if (f.width >= 0 && f.dot < ft_digitlen(i))
-	{
-		if (i >= 0)
-		{
-			// 3 варианта флагов -, 0, ' '
-			if (f.minus == 0 && f.zero == 0)
-			{
-				ret_value += ft_flag_handler(f.width - ft_digitlen(i),0,0);
-				ret_value += ft_newputnbr(i);
-			}
-			else if (f.minus == 1)
-			{
-				ret_value += ft_newputnbr(i);
-				ret_value += ft_flag_handler(f.width - ft_digitlen(i) + 1,1,0);
-			}
-			else if (f.zero == 1)
-			{
-				ret_value += ft_flag_handler(f.width - ft_digitlen(i),0,1);
-				ret_value += ft_newputnbr(i);
-			}
-		}
-		else
-		{
-			if (f.minus == 0 && f.zero == 0)
-			{
-				ret_value += ft_flag_handler(f.width - ft_digitlen(i) - 1,0,0);
-				ft_putchar_fd('-', 1);
-				ret_value += ft_newputnbr(i) + 1;
-			}
-			else if (f.minus == 1)
-			{
-				ft_putchar_fd('-', 1);
-				ret_value += ft_newputnbr(i) + 1;
-				ret_value += ft_flag_handler(f.width - ft_digitlen(i),1,0);
-			}
-			else if (f.zero == 1)
-			{
-				ft_putchar_fd('-', 1);
-				ret_value += ft_flag_handler(f.width - ft_digitlen(i) - 1,0,1);
-				ret_value += ft_newputnbr(i) + 1;
-			}
-		}
-	}
-
-	if (f.width >= 0 && f.dot > -1)
-	{
-		if (f.width <= f.dot)
-			f.width = f.dot;
-		if (i >= 0)
-		{
-
-			if (ft_digitlen(i) < f.dot)
-			{
-				if (f.width >= f.dot)
-				{
-					if (f.minus == 1)
-					{
-						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1);
-						ret_value += ft_newputnbr(i);
-						ret_value += ft_flag_handler(f.width - f.dot,0,0);
-					}
-					else
-					{
-						ret_value += ft_flag_handler(f.width - f.dot,0,0);
-						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1);
-						ret_value += ft_newputnbr(i);
-					}
-				}
-			}
-			else
-			{
-				ret_value += ft_flag_handler(f.width - ft_digitlen(i),0,0);
-				ret_value += ft_newputnbr(i);
-			}
-		}
-		else
-		{
-			if (ft_digitlen(i) <= f.dot)
-			{
-
-				if (f.width >= f.dot)
-				{
-					if (f.minus == 1)
-					{
-						ft_putchar_fd('-',1);
-						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1);
-						ret_value += ft_newputnbr(i) + 1;
-						ret_value += ft_flag_handler(f.width - f.dot,0,0);
-					}
-					else
-					{
-						ret_value += ft_flag_handler(f.width - f.dot - 1,0,0);
-						ft_putchar_fd('-',1);
-						ret_value += ft_flag_handler(f.dot - ft_digitlen(i),0,1) + 1;
-						ret_value += ft_newputnbr(i);
-					}
-				}
-			}
-		}
-	}
-	return (ret_value);
+	return  ret_value;
 }

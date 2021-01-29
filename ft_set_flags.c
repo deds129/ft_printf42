@@ -1,16 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_set_flags.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hanisha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/29 13:57:37 by hanisha           #+#    #+#             */
+/*   Updated: 2021/01/29 13:57:38 by hanisha          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int set_minus(t_flags *flag,int i)
+int		set_minus(t_flags *flag, int i)
 {
-	flag -> minus = 1;
-	flag -> zero = 0;
+	flag->minus = 1;
+	flag->zero = 0;
 	return (++i);
 }
 
-int set_zero(t_flags *flag,int i)
+int		set_zero(t_flags *flag, int i)
 {
-	flag -> zero = 1;
+	flag->zero = 1;
 	return (++i);
 }
 
@@ -45,7 +56,7 @@ int		set_star(t_flags *flag, int i, va_list ap)
 int		set_width(const char c, t_flags *flag, int i)
 {
 	if (flag->star)
-		flag->width= 0;
+		flag->width = 0;
 	flag->width = (flag->width * 10) + (c - '0');
 	return (i + 1);
 }
