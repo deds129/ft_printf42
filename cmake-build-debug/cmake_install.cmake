@@ -1,4 +1,4 @@
-# Install script for directory: /home/deds/Desktop/hanisha/ft_printf_project/ft_printf42
+# Install script for directory: /home/deds/Desktop/ft_printf42
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/deds/Desktop/ft_printf42/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

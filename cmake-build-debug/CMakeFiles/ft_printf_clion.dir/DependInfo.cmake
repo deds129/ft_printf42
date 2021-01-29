@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/ft_printf.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_printf.c.o"
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/main.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/main.c.o"
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/parser/ft_format_parser.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/parser/ft_format_parser.c.o"
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/parser/set_flags.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/parser/set_flags.c.o"
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_char_type.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_char_type.c.o"
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_flag_handler.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_flag_handler.c.o"
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_processor.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_processor.c.o"
-  "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/processor/ft_string_type.c" "/home/deds/Desktop/hanisha/ft_printf_project/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/processor/ft_string_type.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_char_type.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_char_type.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_flag_handler.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_flag_handler.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_format_parser.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_format_parser.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_printf.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_printf.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_processor.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_processor.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_set_flags.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_set_flags.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_string_type.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_string_type.c.o"
+  "/home/deds/Desktop/ft_printf42/main.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -27,15 +27,7 @@ int		ft_minus_handle(int ret_value, char *str, t_flags flags)
 	return (ret_value);
 }
 
-int		ft_dot_out(char *str, int dot)
-{
-	int i;
 
-	i = 0;
-	while (str[i] && i < dot)
-		ft_putchar_fd(str[i++], 1);
-	return (i);
-}
 
 int		ft_string_type(char *str, t_flags flags)
 {

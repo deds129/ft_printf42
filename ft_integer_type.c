@@ -1,58 +1,38 @@
 #include "includes/ft_printf.h"
 //[−2 147 483 648, +2 147 483 647]
-int	ft_iflag(int width, int num, int zero)
+
+int	ft_dot_handle(char *str, int num, t_flags f)
 {
 	int count;
 
 	count = 0;
-	if(num < 0)
-	{
-		width--;
-	}
-	while (width >= 0)
-	{
-		if (zero == 1)
-			ft_putchar_fd('0', 1);
-		else
-			ft_putchar_fd(' ', 1);
-		width--;
-		count++;
-	}
+	if (f.dot >= 0 && num < 0)
+		ft_putchar_fd('-',1);
+	if (f.dot >= 0)
+		count += ft_flag_handler(f.dot - 1, ft_strlen(str) - 1, 1);
+	count += ft_dot_out(str, ft_strlen(str));
 	return (count);
 }
 
-int ft_digitlen(int num)
+int	ft_put_int(char *str, int num, t_flags f)
 {
-	int len;
+	int ret_val;
 
-	len = 0;
-	if(num == 0)
-		return 1;
-	if (num < 0)
-		len++;
-	while (num)
+	ret_val = 0;
+	if (f.minus == 1)
+		ret_val += ft_dot_handle(str, num, f);
+	if (f.dot >= 0 && (size_t)f.dot < ft_strlen(str))
+		f.dot = ft_strlen(str);
+	if (f.dot >= 0)
 	{
-		num/=10;
-		len++;
+		f.width -= f.dot;
+		ret_val += ft_flag_handler(f.width, 0, 0);
 	}
-	return (len);
-}
-
-//печатает число без 0 и возвращает длину числа с учетом знака минус
-int	ft_newputnbr(int n)
-{
-	//кейс с крайним значением int нужно ли переводить в long?
-	unsigned int	n1;
-
-	n1 = 0;
-	if (n < 0)
-		n1 = n * -1;
 	else
-		n1 = (unsigned int)n;
-	if (n1 >= 10)
-		ft_newputnbr(n1 / 10);
-	ft_putchar_fd(n1 % 10 + '0', 1);
-	return (ft_digitlen(n));
+		ret_val += ft_flag_handler(f.width, ft_strlen(str), f.zero);
+	if (f.minus == 0)
+		ret_val += ft_dot_handle(str, num, f);
+	return (ret_val);
 }
 
 
@@ -60,31 +40,29 @@ int	ft_newputnbr(int n)
 int ft_integer_type(int i, t_flags f)
 {
 	int ret_value;
-	int dlen;
+	int num;
+	char *str;
 
 	ret_value = 0;
-	dlen = ft_digitlen(i);
-
+	num = i;
 	//case 0
 	if (i == 0 && f.dot == 0)
 	{
 		ret_value += ft_flag_handler(f.width, 0, 0);
 		return  ret_value;
 	}
-	//кода не нужно добивать нулями
-	else if (f.width && (f.dot <= dlen || f.dot <= -1))
+
+	if (i < 0 && (f.dot >= 0 || f.zero == 1))
 	{
-		if (f.minus == 0 && f.zero == 0)
-		{
-			ft_flag_handler(f.width - dlen,0,0);
-			ft_putnbr_fd(i,1);
-			ret_value += f.width;
-		}
-		else if (f.minus)
-		{
-			ft_putnbr_fd(i,1);
-			ret_value += ft_iflag(f.width - dlen,i,0) + dlen;
-		}
+		if(f.dot <= -1 && f.zero == 1)
+			ft_dot_out("-",1);
+		i *= -1;
+		f.zero = 1;
+		f.width--;
+		ret_value++;
 	}
-	return  ret_value;
+	str = ft_itoa(i);
+	ret_value += ft_put_int(str,num,f);
+	free(str);
+	return  (ret_value);
 }

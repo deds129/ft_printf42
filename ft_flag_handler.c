@@ -28,3 +28,13 @@ int	ft_flag_handler(int width, int minus, int zero)
 	}
 	return (count);
 }
+
+int		ft_dot_out(char *str, int dot)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && i < dot)
+		ft_putchar_fd(str[i++], 1);
+	return (i);
+}
