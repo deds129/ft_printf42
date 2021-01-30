@@ -85,6 +85,9 @@
 		<Unit filename="/home/deds/Desktop/ft_printf42/ft_format_parser.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
+		<Unit filename="/home/deds/Desktop/ft_printf42/ft_hexint_type.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
 		<Unit filename="/home/deds/Desktop/ft_printf42/ft_printf.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>

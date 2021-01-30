@@ -66,22 +66,22 @@ char *ft_u_itoa(unsigned int num)
 }
 
 
-int ft_uint_type(unsigned int num, t_flags f)
+int ft_uint_type(unsigned int uint, t_flags f)
 {
 	int ret;
 	char *str_num;
 
 	ret = 0;
-	num  = (unsigned int)(4294967295 + 1 + num);
+	uint  = (unsigned int)(4294967295 + 1 + uint);
 
 	//zero case
-	if (num == 0 && f.dot == 0)
+	if (uint == 0 && f.dot == 0)
 	{
 		ret += ft_flag_handler(f.width, 0, 0);
 		return  (ret);
 	}
-	str_num = ft_u_itoa(num);
-	ret += ft_put_int(str_num,1,f);
+	str_num = ft_u_itoa(uint);
+	ret += ft_put_int(str_num,uint,f);
 	free(str_num);
 	return (ret);
 }

@@ -3,11 +3,13 @@
 int main()
 {
 	int ret;
+	ft_printf("%x\n",8712222);
+	ft_printf("%X",8712222);
 
-	ret = printf("%-7.3d", -14); printf("$ return: %d",ret);
-	printf("\n");
-	ret = ft_printf("%-7.3d", -14); printf("$ return: %d",ret);
-	printf("\n");
+//	ret = printf("%-7.3d", -14); printf("$ return: %d",ret);
+//	printf("\n");
+//	ret = ft_printf("%-7.3d", -14); printf("$ return: %d",ret);
+//	printf("\n");
 //
 //	printf("\n---------------------------------------------\n");
 //	ret = printf("%-10d", 10); printf("$ return: %d",ret);

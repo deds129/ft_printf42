@@ -26,6 +26,7 @@ SRCS	=	ft_printf.c\
 			ft_set_flags.c\
 			ft_string_type.c\
 			ft_uint_type.c\
+			ft_hexint_type.c
 
 CFLAGS =  -Wall -Wextra -Werror -I ${INCL} -c
 

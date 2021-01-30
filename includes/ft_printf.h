@@ -45,6 +45,8 @@ t_flags ft_flag_parse (const char *format, va_list args, int *i);
 int ft_integer_type(int i, t_flags f);
 int ft_char_type(char c,t_flags flags);
 int ft_uint_type( unsigned int num,t_flags f);
+int ft_hexint_type(unsigned int uint, int f_upper, t_flags f);
+
 int ft_perc_type(t_flags flags);
 int ft_pointer_type(unsigned long long ptr, t_flags flags);
 int ft_processor(int i,t_flags flags,va_list args);
@@ -58,4 +60,5 @@ int ft_dot_out(char *str,int dot);
 int ft_string_type(char *str,t_flags flags);
 int	ft_dot_handle(char *str, int num, t_flags f);
 int	ft_put_int(char *str, int num, t_flags f);
+char *ft_itoa_base(unsigned long long num, int base);
 #endif

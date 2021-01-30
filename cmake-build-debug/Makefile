@@ -224,6 +224,33 @@ ft_format_parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_format_parser.c.s
 .PHONY : ft_format_parser.c.s
 
+ft_hexint_type.o: ft_hexint_type.c.o
+
+.PHONY : ft_hexint_type.o
+
+# target to build an object file
+ft_hexint_type.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_hexint_type.c.o
+.PHONY : ft_hexint_type.c.o
+
+ft_hexint_type.i: ft_hexint_type.c.i
+
+.PHONY : ft_hexint_type.i
+
+# target to preprocess a source file
+ft_hexint_type.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_hexint_type.c.i
+.PHONY : ft_hexint_type.c.i
+
+ft_hexint_type.s: ft_hexint_type.c.s
+
+.PHONY : ft_hexint_type.s
+
+# target to generate assembly for a file
+ft_hexint_type.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_hexint_type.c.s
+.PHONY : ft_hexint_type.c.s
+
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -404,6 +431,9 @@ help:
 	@echo "... ft_format_parser.o"
 	@echo "... ft_format_parser.i"
 	@echo "... ft_format_parser.s"
+	@echo "... ft_hexint_type.o"
+	@echo "... ft_hexint_type.i"
+	@echo "... ft_hexint_type.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
