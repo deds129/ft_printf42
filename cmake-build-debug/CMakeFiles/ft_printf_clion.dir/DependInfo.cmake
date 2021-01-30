@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/deds/Desktop/ft_printf42/ft_processor.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_processor.c.o"
   "/home/deds/Desktop/ft_printf42/ft_set_flags.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_set_flags.c.o"
   "/home/deds/Desktop/ft_printf42/ft_string_type.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_string_type.c.o"
+  "/home/deds/Desktop/ft_printf42/ft_uint_type.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/ft_uint_type.c.o"
   "/home/deds/Desktop/ft_printf42/main.c" "/home/deds/Desktop/ft_printf42/cmake-build-debug/CMakeFiles/ft_printf_clion.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

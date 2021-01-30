@@ -24,7 +24,8 @@ SRCS	=	ft_printf.c\
 			ft_pointer_type.c\
 			ft_processor.c\
 			ft_set_flags.c\
-			ft_string_type.c
+			ft_string_type.c\
+			ft_uint_type.c\
 
 CFLAGS =  -Wall -Wextra -Werror -I ${INCL} -c
 

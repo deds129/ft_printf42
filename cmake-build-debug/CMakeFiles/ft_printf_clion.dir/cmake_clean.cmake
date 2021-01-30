@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf_clion.dir/ft_processor.c.o"
   "CMakeFiles/ft_printf_clion.dir/ft_set_flags.c.o"
   "CMakeFiles/ft_printf_clion.dir/ft_string_type.c.o"
+  "CMakeFiles/ft_printf_clion.dir/ft_uint_type.c.o"
   "CMakeFiles/ft_printf_clion.dir/main.c.o"
   "ft_printf_clion"
   "ft_printf_clion.pdb"

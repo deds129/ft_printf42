@@ -97,6 +97,9 @@
 		<Unit filename="/home/deds/Desktop/ft_printf42/ft_string_type.c">
 			<Option target="ft_printf_clion"/>
 		</Unit>
+		<Unit filename="/home/deds/Desktop/ft_printf42/ft_uint_type.c">
+			<Option target="ft_printf_clion"/>
+		</Unit>
 		<Unit filename="/home/deds/Desktop/ft_printf42/includes/ft_printf.h">
 			<Option target="ft_printf_clion"/>
 		</Unit>

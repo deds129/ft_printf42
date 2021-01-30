@@ -332,6 +332,33 @@ ft_string_type.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_string_type.c.s
 .PHONY : ft_string_type.c.s
 
+ft_uint_type.o: ft_uint_type.c.o
+
+.PHONY : ft_uint_type.o
+
+# target to build an object file
+ft_uint_type.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_uint_type.c.o
+.PHONY : ft_uint_type.c.o
+
+ft_uint_type.i: ft_uint_type.c.i
+
+.PHONY : ft_uint_type.i
+
+# target to preprocess a source file
+ft_uint_type.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_uint_type.c.i
+.PHONY : ft_uint_type.c.i
+
+ft_uint_type.s: ft_uint_type.c.s
+
+.PHONY : ft_uint_type.s
+
+# target to generate assembly for a file
+ft_uint_type.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_clion.dir/build.make CMakeFiles/ft_printf_clion.dir/ft_uint_type.c.s
+.PHONY : ft_uint_type.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -389,6 +416,9 @@ help:
 	@echo "... ft_string_type.o"
 	@echo "... ft_string_type.i"
 	@echo "... ft_string_type.s"
+	@echo "... ft_uint_type.o"
+	@echo "... ft_uint_type.i"
+	@echo "... ft_uint_type.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

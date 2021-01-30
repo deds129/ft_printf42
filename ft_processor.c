@@ -18,9 +18,10 @@ int ft_processor(int i,t_flags flags,va_list args)
 
 	else if (flags.type == 'd' || flags.type == 'i')
 		i = ft_integer_type(va_arg(args, int), flags);
-	/*
+
 	else if (flags.type == 'u')
 		i = ft_uint_type((unsigned int)va_arg(args, unsigned int),flags);
+	/*
 	else if(flags.type == 'x')
 		i = ft_hexint_type(va_arg(args, unsigned int), 1, flags);
 	else if(flags.type == 'X')
