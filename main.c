@@ -3,8 +3,8 @@
 int main()
 {
 	int ret;
-	ft_printf("%x\n",8712222);
-	ft_printf("%X",8712222);
+	printf("%X %x\n",4294967295u, 1111);
+	printf("%X %x\n",4294967295u, 1111);
 
 //	ret = printf("%-7.3d", -14); printf("$ return: %d",ret);
 //	printf("\n");

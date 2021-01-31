@@ -12,7 +12,7 @@
 
 #include "includes/ft_printf.h"
 
-int	ft_perc_type(t_flags flags)
+int		ft_perc_type(t_flags flags)
 {
 	int ret_value;
 

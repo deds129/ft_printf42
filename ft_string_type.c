@@ -27,8 +27,6 @@ int		ft_minus_handle(int ret_value, char *str, t_flags flags)
 	return (ret_value);
 }
 
-
-
 int		ft_string_type(char *str, t_flags flags)
 {
 	int ret_value;

@@ -12,7 +12,7 @@
 
 #include "includes/ft_printf.h"
 
-int	ft_flag_handler(int width, int minus, int zero)
+int		ft_flag_handler(int width, int minus, int zero)
 {
 	int count;
 
