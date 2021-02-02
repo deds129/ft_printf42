@@ -3,9 +3,17 @@
 int main()
 {
 	int ret;
-	printf("%X %x\n",4294967295u, 1111);
-	printf("%X %x\n",4294967295u, 1111);
-
+	ft_printf("%% *.5i 42 == |% *.5i|", 4, 42);
+	//
+//	Test 647 (moul_star_2) : FAILED.
+//			First line of code: {return test("%% *.5i 42 == |% *.5i|
+//											 ", 4, 42);}
+//	expected output : "% *.5i 42 == | 00042|
+//					  "
+//	your output     : "000000000 *.5i 42 == ||
+//					  "
+//	expected (nonprintable as hex) : "% *.5i 42 == | 00042|\x0a"
+//	actual   (nonprintable as hex) : "000000000 *.5i 42 == ||\x0a"
 //	ret = printf("%-7.3d", -14); printf("$ return: %d",ret);
 //	printf("\n");
 //	ret = ft_printf("%-7.3d", -14); printf("$ return: %d",ret);
