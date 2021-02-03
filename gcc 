@@ -1,1 +1,33 @@
-gcc main.c ft_printf.c libft/ft_putchar_fd.c libft/ft_isdigit.c parser/ft_format_parser.c parser/set_flags.c processor/ft_char_type.c processor/ft_flag_handler.c processor/ft_perc_type.c processor/ft_processor.c processor/ft_string_type.c libft/ft_putstr_fd.c libft/ft_strlen.c
+gcc main.c ft_printf.c libft/ft_putchar_fd.c ft_char_type.c ft_flag_handler.c ft_string_type.c ft_processor.c ft_format_parser.c ft_set_flags.c libft/ft_isdigit.c libft/ft_putstr_fd.c libft/ft_strlen.c ft_perc_type.c ft_integer_type.c ft_pointer_type.c libft/ft_putnbr_fd.c ft_hexint_type.c libft/ft_itoa.c ft_uint_type.c libft/ft_strdup.c libft/ft_toupper.c
+
+Test 647 (moul_star_2) : FAILED.
+    First line of code: {return test("%% *.5i 42 == |% *.5i|
+", 4, 42);}
+      expected output : "% *.5i 42 == | 00042|
+"
+      your output     : "% *.5i 42 == |00042|
+"
+      expected (nonprintable as hex) : "% *.5i 42 == | 00042|\x0a"
+      actual   (nonprintable as hex) : "% *.5i 42 == |00042|\x0a"
+
+Test 4192 (notintsubject_o_neg_prec_star_01) : FAILED.
+    First line of code: {return test("%.*o", -3, 12345);}
+      expected output : "30071"
+      your output     : "%.*x"
+      expected (nonprintable as hex) : "30071"
+      actual   (nonprintable as hex) : "%.*x"
+
+Test 4193 (notintsubject_o_neg_prec_star_02) : FAILED.
+    First line of code: {return test("%.*o", -1, 12345);}
+      expected output : "30071"
+      your output     : "%.*x"
+      expected (nonprintable as hex) : "30071"
+      actual   (nonprintable as hex) : "%.*x"
+
+Test 4194 (notintsubject_o_neg_prec_star_03) : FAILED.
+    First line of code: {return test("%.*o", -1, 0);}
+      expected output : "0"
+      your output     : "%.*x"
+      expected (nonprintable as hex) : "0"
+      actual   (nonprintable as hex) : "%.*x"
+

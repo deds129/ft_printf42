@@ -68,7 +68,7 @@ char			*ft_u_itoa(unsigned int num)
 	int			f_neg;
 	char		*ret;
 
-	ret = '\0';
+	ret = "\0";
 	n = num;
 	len = ft_num_len(n);
 	f_neg = 0;
