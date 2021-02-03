@@ -4,6 +4,11 @@ int main()
 {
 	int ret;
 	ft_printf("%% *.5i 42 == |% *.5i|", 4, 42);
+	printf("\n");
+	ft_printf("%5%");
+	printf("\n");
+	//printf("%5%");
+
 	//
 //	Test 647 (moul_star_2) : FAILED.
 //			First line of code: {return test("%% *.5i 42 == |% *.5i|
