@@ -6,9 +6,9 @@ int main()
 	int ret;
 		printf("\n---------------------------------------------\n");
 	//ret = printf("%0*d", -2147483648); printf("$ return: %d",ret);
-//	printf("\n");
-//	ret = ft_printf("%0*d", -2147483648); printf("$ return: %d",ret);
-//	printf("\n");
+	//printf("\n");
+	ret = ft_printf("%0*d", -2147483648); printf("$ return: %d",ret);
+	printf("\n");
 
 
 	//printf("%5%");

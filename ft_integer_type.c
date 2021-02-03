@@ -17,7 +17,7 @@ int		ft_dot_handle(char *str, int num, t_flags f)
 	int count;
 
 	count = 0;
-	if (f.dot >= 0 && num < 0)
+	if (f.dot >= 0 && num < 0 && num != -2147483648)
 		ft_putchar_fd('-', 1);
 	if (f.dot >= 0)
 		count += ft_flag_handler(f.dot - 1, ft_strlen(str) - 1, 1);
@@ -59,7 +59,7 @@ int		ft_integer_type(int i, t_flags f)
 		ret_value += ft_flag_handler(f.width, 0, 0);
 		return (ret_value);
 	}
-	if (i < 0 && (f.dot >= 0 || f.zero == 1))
+	if (i < 0 && num != -2147483648 && (f.dot >= 0 || f.zero == 1))
 	{
 		if (f.dot <= -1 && f.zero == 1)
 			ft_dot_out("-", 1);
