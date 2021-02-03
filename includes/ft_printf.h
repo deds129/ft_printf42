@@ -51,8 +51,8 @@ int					set_width(const char c, t_flags *flag, int i);
 int					ft_minus_handle(int ret_value, char *str, t_flags flags);
 int					ft_dot_out(char *str, int dot);
 int					ft_string_type(char *str, t_flags flags);
-int					ft_dot_handle(char *str, int num, t_flags f);
-int					ft_put_int(char *str, int num, t_flags f);
+int					ft_dot_handle(char *str, int num, t_flags f, int neg_fl);
+int					ft_put_int(char *str, int num, t_flags f, int neg_fl);
 char				*ft_itoa_base(unsigned long long num, int base);
 
 #endif

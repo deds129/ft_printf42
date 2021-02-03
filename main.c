@@ -2,12 +2,13 @@
 #include "includes/ft_printf.h"
 int main()
 {
+	//4294967284
 	//"%0*i, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d" -2147483648,
 	int ret;
 		printf("\n---------------------------------------------\n");
-	//ret = printf("%0*d", -2147483648); printf("$ return: %d",ret);
-	//printf("\n");
-	ret = ft_printf("%0*d", -2147483648); printf("$ return: %d",ret);
+	ret = printf("%*.*x",0,4,-429); printf("$ return: %d",ret);
+	printf("\n");
+	ret = ft_printf("%*.*x",0,4,-429); printf("$ return: %d",ret);
 	printf("\n");
 
 
@@ -28,15 +29,11 @@ int main()
 //	ret = ft_printf("%-7.3d", -14); printf("$ return: %d",ret);
 //	printf("\n");
 //
-	printf("\n---------------------------------------------\n");
-	ret = printf("%10c", 49); printf("$ return: %d",ret);
-	printf("\n");
-	ret = ft_printf("%10c", 49); printf("$ return: %d",ret);
-	printf("\n");
-
-
-
-
+//	printf("\n---------------------------------------------\n");
+//	ret = printf("%10c", 49); printf("$ return: %d",ret);
+//	printf("\n");
+//	ret = ft_printf("%10c", 49); printf("$ return: %d",ret);
+//	printf("\n");
 //	printf("\n=======original printf   char=========\n");
 //	ret = printf("%4c",'*'); printf("$ return: %d",ret);
 //	printf("\n");

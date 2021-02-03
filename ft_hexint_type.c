@@ -78,7 +78,7 @@ int		ft_hexint_type(unsigned int uint, int f_upper, t_flags f)
 	hexint = ft_itoa_base(uint, 16);
 	if (f_upper > 0)
 		hexint = ft_str_touppercase(hexint);
-	ret += ft_put_int(hexint, uint, f);
+	ret += ft_put_int(hexint, uint, f, 0);
 	free(hexint);
 	return (ret);
 }

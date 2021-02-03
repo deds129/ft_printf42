@@ -90,7 +90,7 @@ int				ft_uint_type(unsigned int uint, t_flags f)
 		return (ret);
 	}
 	str_num = ft_u_itoa(uint);
-	ret += ft_put_int(str_num, uint, f);
+	ret += ft_put_int(str_num, uint, f, 0);
 	free(str_num);
 	return (ret);
 }
