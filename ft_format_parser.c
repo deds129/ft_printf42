@@ -46,19 +46,17 @@ t_flags				ft_flag_parse(const char *format, va_list args, int *i)
 	flags = ft_struct_init();
 	while (!is_type(format[j]))
 	{
-		if (ft_isflag(format[j]))
-		{
-			if (format[j] == '.')
-				j = set_dot(format, &flags, j, args);
-			if (format[j] == '*')
-				j = set_star(&flags, j, args);
-			if (format[j] == '-')
-				j = set_minus(&flags, j);
-			if (format[j] == '0' && !flags.minus && flags.width <= 0)
-				j = set_zero(&flags, j);
-			if (ft_isdigit(format[j]))
-				j = set_width(format[j], &flags, j);
-		}
+		if (format[j] == '.' && ft_isflag(format[j]))
+			j = set_dot(format, &flags, j, args);
+		else if (format[j] == '*' && ft_isflag(format[j]))
+			j = set_star(&flags, j, args);
+		else if (format[j] == '-' && ft_isflag(format[j]))
+			j = set_minus(&flags, j);
+		else if (format[j] == '0' && !flags.minus && flags.width <= 0 &&
+		ft_isflag(format[j]))
+			j = set_zero(&flags, j);
+		else if (ft_isdigit(format[j]) && ft_isflag(format[j]))
+			j = set_width(format[j], &flags, j);
 		else
 			j++;
 	}
