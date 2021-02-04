@@ -19,7 +19,7 @@ int		ft_perc_type(t_flags flags)
 	ret_value = 0;
 	if (!flags.minus && !flags.zero)
 	{
-		ret_value += ft_flag_handler(flags.width , 1, 0);
+		ret_value += ft_flag_handler(flags.width, 1, 0);
 		ft_putchar_fd('%', 1);
 		return (++ret_value);
 	}

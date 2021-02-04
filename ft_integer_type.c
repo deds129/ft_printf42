@@ -62,7 +62,7 @@ int		ft_integer_type(int i, t_flags f)
 	if (i < 0 && num != -2147483648 && (f.dot >= 0 || f.zero == 1))
 	{
 		if (f.dot <= -1 && f.zero == 1)
-			ft_dot_out("-", 1);
+			ft_putchar_fd('-',1);
 		i *= -1;
 		f.zero = 1;
 		f.width--;
