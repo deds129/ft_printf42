@@ -19,19 +19,19 @@ int		ft_perc_type(t_flags flags)
 	ret_value = 0;
 	if (!flags.minus && !flags.zero)
 	{
-		ret_value += ft_flag_handler(flags.width - 1, 0, 0);
+		ret_value += ft_flag_handler(flags.width , 1, 0);
 		ft_putchar_fd('%', 1);
 		return (++ret_value);
 	}
 	else if (flags.minus == 1)
 	{
 		ft_putchar_fd('%', 1);
-		ret_value += ft_flag_handler(flags.width - 1, 0, 0);
+		ret_value += ft_flag_handler(flags.width, 1, 0);
 		return (++ret_value);
 	}
 	else if (flags.zero && flags.minus != 1)
 	{
-		ret_value += ft_flag_handler(flags.width - 1, 0, 1);
+		ret_value += ft_flag_handler(flags.width, 1, 1);
 		ft_putchar_fd('%', 1);
 		return (++ret_value);
 	}
