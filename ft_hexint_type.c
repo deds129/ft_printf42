@@ -41,7 +41,7 @@ char	*ft_itoa_base(unsigned long long num, int base)
 		num /= base;
 		i++;
 	}
-	if (!(ret_str = malloc((i + 1) * sizeof(char))))
+	if (!(ret_str = malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	ret_str[i] = '\0';
 	ret_str = ft_to_base(temp, base, i, ret_str);
